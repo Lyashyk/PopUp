@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  padding: 16px 32px;
+  line-height: 22px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: solid 1px transparent;
+  color: #fff;
+  background-color: #8b4f6e;
+  cursor: pointer;
+  outline: none;
+  transition: background-color ease-out 0.2s;
+}
+
+@media (max-width: 480px) {
+  .button {
+    display: inline-block;
+    padding: 11px 32px;
+    line-height: 20px;
+    font-size: 18px;
+  }
+}
+
+.button:hover {
+  background-color: #a2728b;
+}
+
+.button:focus {
+  box-shadow: 0px 0px 16px 0 #7a2a50;
+}
+
+.button:active {
+  background-color: #7a2a50;
+}
+
+.button--expanded {
+  width: 100%;
+  box-sizing: border-box;
+}

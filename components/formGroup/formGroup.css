@@ -1,0 +1,21 @@
+.formGroup {
+  display: flex;
+  margin: -8px;
+}
+
+@media (max-width: 640px) {
+  .formGroup {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.formGroup-wideCol {
+  flex: 1 1 auto;
+  padding: 8px;
+}
+
+.formGroup-narrowCol {
+  flex: 0 0 auto;
+  padding: 8px;
+}

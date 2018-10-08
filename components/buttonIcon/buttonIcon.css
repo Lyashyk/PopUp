@@ -1,0 +1,23 @@
+.buttonIcon {
+  display: inline-block;
+  padding: 4px;
+
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease-out;
+}
+
+.buttonIcon:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.buttonIcon:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.buttonIcon:active {
+  border: 1px solid #fff;
+}

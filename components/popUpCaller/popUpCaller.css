@@ -1,0 +1,38 @@
+.popUpCaller {
+  min-width: 420px;
+}
+
+@media (max-width: 480px) {
+  .popUpCaller {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.popUpCaller-hint {
+  padding: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: #8b4f6e;
+}
+
+@media (max-width: 480px) {
+  .popUpCaller-hint {
+    padding: 8px;
+    font-size: 24px;
+  }
+}
+
+.popUpCaller-button {
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .popUpCaller-button {
+    padding: 8px;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,31 @@
+.iconCross {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.iconCross::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 2px;
+  width: 16px;
+  background-color: #fff;
+}
+
+.iconCross::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  height: 2px;
+  width: 16px;
+  background-color: #fff;
+}

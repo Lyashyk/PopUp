@@ -1,0 +1,32 @@
+.dialog {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  height: 100vh;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-window {
+  min-width: 800px;
+}
+
+@media (max-width: 840px) {
+  .dialog-window {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.dialog--visible {
+  display: block;
+}

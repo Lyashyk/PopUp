@@ -1,0 +1,10 @@
+.page {
+}
+
+.page-content {
+  height: 100vh;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,27 @@
+.form {
+  position: relative;
+}
+
+.form-row {
+  margin-bottom: 24px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-hint {
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+  width: 100%;
+  color: #e4c0c7;
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .form-hint {
+    display: none;
+  }
+}
