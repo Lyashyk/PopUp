@@ -19,4 +19,13 @@ dialog.onclick = e => {
   }
 };
 
-console.log(document.activeElement);
+const emailValidate = document.getElementsByClassName("input-field")[0];
+const input = document.getElementsByClassName("input")[0];
+
+emailValidate.onchange = () => {
+  if (!emailValidate.value) {
+    input.classList.add("input--fieldError");
+  } else {
+    input.classList.remove("input--fieldError");
+  }
+};
