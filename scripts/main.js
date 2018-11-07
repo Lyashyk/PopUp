@@ -22,8 +22,24 @@ dialog.onclick = e => {
 const emailValidate = document.getElementsByClassName("input-field")[0];
 const input = document.getElementsByClassName("input")[0];
 
+// const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+// emailValidate.onchange = () => {
+//   if (emailValidate.value != reg) {
+//     input.classList.add("input--fieldError");
+//   } else {
+//     input.classList.remove("input--fieldError");
+//   }
+// };
+
+// if (reg.test(address) == false) {
+//   alert("Введите корректный e-mail");
+//   return false;
+// }
+
 emailValidate.onchange = () => {
-  if (!emailValidate.value) {
+  if (reg.test(emailValidate.value) == false) {
     input.classList.add("input--fieldError");
   } else {
     input.classList.remove("input--fieldError");
