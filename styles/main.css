@@ -1,12 +1,20 @@
 @import "./generic.css";
-@import "../components/page/page.css";
-@import "../components/popUpCaller/popUpCaller.css";
-@import "../components/popUp/popUp.css";
-@import "../components/icon-cross/icon-cross.css";
-@import "../components/formGroup/formGroup.css";
-@import "../components/button/button.css";
-@import "../components/input/input.css";
-@import "../components/dialog/dialog.css";
-@import "../components/buttonIcon/buttonIcon.css";
-@import "../components/form/form.css";
-@import "../components/field/field.css";
+@import "../components/page.css";
+@import "../components/popUpCaller.css";
+@import "../components/popUp.css";
+@import "../components/icon-cross.css";
+@import "../components/formGroup.css";
+@import "../components/button.css";
+@import "../components/input.css";
+@import "../components/dialog.css";
+@import "../components/buttonIcon.css";
+@import "../components/form.css";
+@import "../components/field.css";
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  background-color: #e4c0c7;
+  position: relative;
+}
