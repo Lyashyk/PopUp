@@ -21,7 +21,8 @@ dialog.onclick = e => {
 const emailValidate = document.getElementsByClassName("input-field")[0];
 const input = document.getElementsByClassName("input")[0];
 const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-popupValidButton = document.getElementsByClassName("button")[1];
+const popupValidButton = document.getElementsByClassName("button")[1];
+const form = document.getElementsByClassName("form")[0];
 
 emailValidate.onchange = () => {
   if (reg.test(emailValidate.value) == false) {
@@ -31,9 +32,11 @@ emailValidate.onchange = () => {
   }
 };
 
-popupValidButton.onclick = () => {
+popupValidButton.onclick = e => {
+  e.preventDefault();
   if (reg.test(emailValidate.value) == true) {
     dialog.classList.remove("dialog--visible");
+    form.submit();
   }
   return false;
 };
