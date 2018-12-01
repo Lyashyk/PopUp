@@ -4,19 +4,25 @@ const dialogContent = document.querySelector(".dialog-content");
 const popUp = document.querySelector(".popUp");
 const popupCloseButton = document.getElementsByClassName("buttonIcon")[0];
 
-popupCallerButton.onclick = () => {
+addClassDialogVisible = () => {
   dialog.classList.add("dialog--visible");
 };
 
-popupCloseButton.onclick = () => {
+popupCallerButton.addEventListener("click", addClassDialogVisible);
+
+removeClassDialogVisibleWithButton = () => {
   dialog.classList.remove("dialog--visible");
 };
 
-dialog.onclick = e => {
+popupCloseButton.addEventListener("click", removeClassDialogVisibleWithButton);
+
+removeClassDialogVisibleWithFields = e => {
   if (e.target === dialog || e.target === dialogContent) {
     dialog.classList.remove("dialog--visible");
   }
 };
+
+dialog.addEventListener("click", removeClassDialogVisibleWithFields);
 //-------------------------------------------------------------------------------------------------------------------------------------------
 const emailValidate = document.getElementsByClassName("input-field")[0];
 const input = document.getElementsByClassName("input")[0];
@@ -24,7 +30,7 @@ const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[
 const popupValidButton = document.getElementsByClassName("button")[1];
 const form = document.getElementsByClassName("form")[0];
 
-emailValidate.onchange = () => {
+emailValidateFunction = () => {
   if (reg.test(emailValidate.value) == false) {
     input.classList.add("input--fieldError");
   } else {
@@ -32,7 +38,9 @@ emailValidate.onchange = () => {
   }
 };
 
-popupValidButton.onclick = e => {
+emailValidate.addEventListener("change", emailValidateFunction);
+
+popupValidButtonFunction = e => {
   e.preventDefault();
   if (reg.test(emailValidate.value) == true) {
     dialog.classList.remove("dialog--visible");
@@ -40,3 +48,5 @@ popupValidButton.onclick = e => {
   }
   return false;
 };
+
+popupValidButton.addEventListener("click", popupValidButtonFunction);
